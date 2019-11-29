@@ -1,0 +1,14 @@
+#刚写css我遇到的问题
+##初学html和css，一看就会，一做就废，着实很无奈。所以，实践是检验真理的唯一标准，我还是根据小练习来学习相关的知识吧。对于一个小白来说，实现一个简单的页面，过程也是异常艰辛，看过的知识不会用，等于没学啊，下面是我遇到的问题。
+###1. 将背景图平铺整个浏览器,要么图片没布满整个浏览器\，要么页面显示不完整:worried:
+```
+background-image:url;
+background-size:100%;
+background-repeat:no-repeat;
+margin:0;
+```
+###2. 盒子定位，相对布局和绝对布局该怎么用\？
+<https://www.cnblogs.com/stephen-liu74/p/3333704.html>
+###3. 如何更深理解css布局
+<http://zh.learnlayout.com/>
+####这里面很全面的介绍了display,margin，盒子模型等布局问题。当你把css的基础知识看完之后，可以看一下这个总结，会让你有一个更深的理解。
