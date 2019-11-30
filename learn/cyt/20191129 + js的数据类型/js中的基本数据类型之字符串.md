@@ -28,7 +28,7 @@
 ### 该表格参照<https://www.runoob.com/js/js-strings.html>整理，实例运用可以参照<https://www.runoob.com/js/js-obj-string.html>
 ## String HTML 包装方法:
 ### 用法：string.方法名（）。不懂的可以参照<https://www.runoob.com/js/js-strings.html>
-| 属性 | 描述 | 
+| 方法 | 描述 | 
 | :--------------- | :----------------------: |
 | anchor() | 创建 HTML 锚。 |
 | big() | 用大号字体显示字符串。string.big() |
