@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹性盒子的排列</title>
+	<style type="text/css">
+		body{
+			direction: rtl;  /*页面布局从右到左排列，它的弹性子元素，也是从右到左*/
+			display: -webkit-flex;
+			display: flex;/*指定整个页面为弹性盒子，默认情况下其子元素在一行上从左向右排列*/
+			background-color: black;
+		}
+		.all{
+			display: -webkit-flex;
+			display: flex; /*指定容器为flex布局，flex布局默认只有一行，从左到右排列，这里继承body的direction:rtl*/
+			background-color: grey;
+			width: 400px;
+			height: 250px;
+			margin-left: 5px;
+		}
+		.box{
+			background-color: #f0a2a3;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+		}
+		.box1{
+			display: -webkit-flex;
+			display: flex; /*指定容器为flex布局*/
+			flex-direction: row;
+			/*row是弹性子元素在父容器中横向左对齐，row-reverse横向右对齐,但是由于body是它的父元素，并且定义了direction，它遵从父元素的排列方式*/
+			background-color: red;
+			width: 400px;
+			height: 250px;
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<div class="box1">
+		<div class="son"></div>
+		<div class="son"></div>
+		<div class="son"></div>
+	</div>
+</body>
+</html>
