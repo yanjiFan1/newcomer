@@ -1,0 +1,13 @@
+CSS
+1. background 属性都有哪些? 都是什么意思？
+2. 利用transition写一个动画
+3. 利用flex布局写一个垂直居中的div
+
+JS
+1. 
+var stringValue = "hello world";
+把stringValue 转换成 "lo world"
+
+
+GIT
+git的操作步骤
