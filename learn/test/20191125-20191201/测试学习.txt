@@ -1,13 +1,26 @@
 CSS
-1. background ���Զ�����Щ? ����ʲô��˼��
-2. ����transitionдһ������
-3. ����flex����дһ����ֱ���е�div
-
+1. background 属性都有哪些? 都是什么意思？
+   答：
+    background-color:背景颜色
+		background-size:背景大小
+    background-image:设置背景图片
+		background-repeat:设置背景图片是否平铺，no-repeat：不平铺
+2. 利用transition写一个动画
+    transform:rotateX(角度):沿着X轴（水平）旋转多少度/rotateY（角度）:沿着Y轴旋转
+    transition:定义动画的持续时间
+3. 利用flex布局写一个垂直居中的div
+     justify-content:center;
+     align-items:center;
 JS
 1. 
 var stringValue = "hello world";
-��stringValue ת���� "lo world"
-
-
+把stringValue 转换成 "lo world"
+      alert(stringValue.slice(3));
+      alert(stringValue.substring(3,0));
 GIT
-git�Ĳ�������
+git的操作步骤
+      git add .:将文件添加到仓库的缓冲区
+      git status:查看需要提交的文件
+      git commit -m "文件名称"：提交文件
+      git pull:更新数据
+      git push origin 分支名称：将文件推送到github的分支里面
