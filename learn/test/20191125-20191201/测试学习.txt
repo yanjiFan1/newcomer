@@ -1,16 +1,16 @@
 CSS
 1. background 属性都有哪些? 都是什么意思？
    答：
-    background-color:背景颜色
-		background-size:背景大小
-    background-image:设置背景图片
-		background-repeat:设置背景图片是否平铺，no-repeat：不平铺
+	background-color:背景颜色
+	background-size:背景大小
+	background-image:设置背景图片
+	background-repeat:设置背景图片是否平铺，no-repeat：不平铺
 2. 利用transition写一个动画
-    transform:rotateX(角度):沿着X轴（水平）旋转多少度/rotateY（角度）:沿着Y轴旋转
-    transition:定义动画的持续时间
+	transform:rotateX(角度):沿着X轴（水平）旋转多少度/rotateY（角度）:沿着Y轴旋转
+	transition:定义动画的持续时间
 3. 利用flex布局写一个垂直居中的div
-     justify-content:center;
-     align-items:center;
+	justify-content:center;
+	align-items:center;
 JS
 1. 
 var stringValue = "hello world";
