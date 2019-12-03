@@ -20,7 +20,7 @@ JS
 var stringValue = "hello world";
 把stringValue 转换成 "lo world"
 	stringValue.slice(3) 
-	alert(stringValue.substring(3,0) 
+	stringValue.substring(3,0) 
 GIT
 git的操作步骤
       git add .:将文件添加到仓库的缓冲区
