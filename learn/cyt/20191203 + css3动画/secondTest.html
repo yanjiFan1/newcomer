@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>其他动画的设置</title>
+	<style type="text/css">
+		body{
+			background-color: #999999;
+		}
+		div{
+			width: 300px;
+			height: 300px;
+			background-color: green;
+		}
+		.box1{
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			transition: transform 1s ease-in;
+		}
+		.box1:hover{
+			transform: rotate(180deg) scale(0.5,0.5);
+		}
+		.box2{
+			position: absolute;
+			top: 100px;
+			left: 500px;
+			transition: transform 1s linear;
+		}
+		.box2:hover{
+			transform: skew(30deg,30deg);
+		}
+		.box3{
+			position: absolute;
+			top: 100px;
+			left: 900px;
+			transition: transfrom 1s ease-in-out;
+		}
+		.box3:hover{
+			transform: rotate3d(x,y,);
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+</body>
+</html>

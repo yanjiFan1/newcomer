@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动画练习</title>
+	<style type="text/css">
+		@-webkit-keyframes mymove{
+		0% {top: 0px;left: 0px;}
+		25% {top: 200px;left: 200px;}
+		50% {top: 400px;left: 400px;}
+		75% {top: 200px;left: 200px;}
+		100% {top: 0px;left: 0px;}
+	}
+	.box{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		position: absolute;
+		-webkit-animation-name: mymove;
+		animation-name: mymove;
+		-webkit-animation-duration: 5s;
+		animation-duration: 5s;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-direction:alternate;
+		animation-direction: alternate;
+	}
+	.box1{
+		width: 300px;
+		height: 300px;
+		background-color: rgba(77,99,77,0.5);
+		position: absolute;       /*注意设置盒子的布局，不然动画不会显示*/
+		-webkit-animation-name: mymove; /*动画名称*/
+		animation-name: mymove;
+		-webkit-animation-duration: 5s; /*动画时长*/
+		animation-duration: 5s;
+		-webkit-animation-timing-function: ease-in-out; /*速度曲线*/
+		animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite; /*播放次数*/
+		animation-iteration-count: infinite;
+		-webkit-animation-direction: normal;    /*轮流反向播放动画*/
+		animation-direction: normal;
+	}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box1"></div>
+</body>
+</html>
