@@ -4,7 +4,7 @@ CSS
 	background-color:背景颜色
 	background-position:背景图像的位置
 	background-image:设置背景图片
-	background-repeat:设置背景图片是否平铺，no-repeat：不平铺
+	background-repeat:设置背景图片是否重复，no-repeat：不重复
 	background-clip:规定背景的绘制区域
 	background-size:背景大小
 	background-attachment:背景图片是固定或者跟着页面的其余部分滚动
