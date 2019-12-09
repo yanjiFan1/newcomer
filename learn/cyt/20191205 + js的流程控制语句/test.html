@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS流程控制语句</title>
+	 
+</head>
+<body>
+	<script type="text/javascript">
+		var one = "HTML";
+			if( one == "HTML" )
+			{
+				document.write("你好!");
+			}
+		var two = "CSS";
+			if( two == "css" )
+			{
+				document.write("我不好！");
+			}
+			else{
+				document.write("你也不好！");
+			}
+		var score = 100;
+			if( score < 60 ){
+				document.write("挂科了！<br>");
+			}else if( score < 70 ){
+				document.write("快挂了！<br>");
+			}else if( score <95 ){
+				document.write("奖学金候选人！<br>");
+			}else{
+				document.write("保研吧！<br>");
+			}
+		var a = 7;
+		switch(a)
+		{
+			case 1: document.write("1个苹果<br>"); break;
+			case 2: document.write("2个苹果<br>"); break;
+			case 3: document.write("3个苹果<br>"); break;
+			case 4: document.write("4个苹果<br>"); break;
+			case 5: document.write("5个苹果<br>"); break;
+			case 6: document.write("6个苹果<br>"); break;
+			case 7: document.write("7个苹果<br>"); break;
+		}
+		var age = 16;
+			while( age <=50 ){
+				if( age == 30 ){
+					age++;
+					continue;//跳出本次循环，进入下次循环
+				}
+				document.write( age + '还年轻！<br>' );
+				age++;
+			}
+		var num = 18;
+			while( num <=50 ){
+				if( num == 30 ){
+					break;//跳出本次循环，进入下次循环
+				}
+				document.write( age + '还年轻！<br>' );
+				age++;
+			}
+			var x = 99;
+			do{
+				document.write( x + '天长地久' );
+			}
+	</script>
+</body>
+</html>
