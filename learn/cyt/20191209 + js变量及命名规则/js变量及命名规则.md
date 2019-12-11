@@ -8,7 +8,7 @@
 > 变量：可变的量，存储和代表不同的值
 
 ```
-//ES3
+//ES3/es5
 var a=12;
 console.log(a); //输出12
 
@@ -19,7 +19,7 @@ b=200;
 const c=1000; //const创建的变量值不允许修改（常量）
 
 //创建函数相当于创建变量
-function f(){}
+function f() {}
 //创建类也相当于创建变量
 class A{}
 //ES6的模块导入也可以创建变量
@@ -55,7 +55,7 @@ https://www.cnblogs.com/Hsong/p/9016950.html
 ### 注释规范
 1. 行内注释
 ```
-function test(){ 测试函数
+function test() { 测试函数
     console.log('hello world!'); // >hello world!
     return 3 + 2; // ->5
 }
@@ -88,7 +88,7 @@ function(){
 ```
 ### 给函数命名，对堆栈轨迹很有用
 ```
-var log = function log(mag){
+var log = function log(mag) {
     console.log(msg);
 }
 ```
