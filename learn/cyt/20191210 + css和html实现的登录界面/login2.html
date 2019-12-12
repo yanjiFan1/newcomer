@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹性盒子的完美居中</title>
+	<style type="text/css">
+		body{
+			width: 100%;
+			height: 100%;
+			font-family: 'Open Sans',sans-serif;
+			background-color: #4A374A;
+			display: -webkit-flex;
+			display: flex;
+		}
+		#login{
+			margin: 16% auto;  /*设置margin为auto*/
+			width: 300px;
+			height: 300px;
+		}
+		#login h1{
+			color: #fff;
+			text-shadow: 0 0 10px;
+			letter-spacing: 1px;
+			text-align: center;
+		}
+		h1{
+			font-size: 2em;
+			margin: 0.67em 0;
+		}
+		input{
+			width: 278px;
+			height: 18px;
+			margin-bottom: 10px;
+			outline: none;
+			padding: 10px;
+			font-size: 13px;
+			color: #fff;
+			text-shadow: 1px 1px 1px;
+			border: 1px solid #312E3D;
+			background-color: #2D2D3F;
+			border-radius: 5px;
+		}
+		.but{
+			width: 300px;
+			min-height: 20px;
+			display: block;
+			background-color: #4a77d4;
+			border: 1px solid #3762bc;
+			color: #fff;
+			padding: 9px 14px;
+			font-size: 15px;
+			line-height: normal;
+			border-radius: 5px;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="login">
+		<h1>Login</h1>
+		<form method="post">
+			<input type="text" required="required" placeholder="用户名" name="u">
+			<input type="password" required="required" placeholder="密码" name="P">
+			<button class="but" type="submit">登录</button>
+		</form>
+	</div>
+</body>
+</html>
