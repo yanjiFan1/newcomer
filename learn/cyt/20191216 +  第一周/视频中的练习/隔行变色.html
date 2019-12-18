@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行变色</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			list-style: none;
+		}
+
+		#newsBox{
+			box-sizing: border-box;
+			margin: 20px auto;
+			padding: 20px;
+			width: 300px;
+			border: 2px solid lightblue;
+		}
+		#newsBox li{
+			line-height: 50px;
+			border-bottom: 1px dashed lightcoral;
+		}
+		#newsBox li:nth-last-child(1) {
+			border-bottom: none
+		}
+		/*基于css实现*/
+		/*#newsBox li:nth-child(even){
+			background-color: lightgray;
+		}
+		#newsBox li:hover{
+			background-color: lightgray;
+		}
+		*/
+	</style>
+</head>
+
+<body>
+	<ul id="newsBox">
+		<li>我是第1个LI</li>
+		<li>我是第2个LI</li>
+		<li>我是第3个LI</li>
+		<li>我是第4个LI</li>
+		<li>我是第5个LI</li>
+	</ul>
+
+	<!-- IMPORT JS -->
+	<script>
+		let newsBox = document.getElementById('newsBox'); //注意getElementById()和getElementsByTagName(),后者是Elements,找错找了半天！！！
+		let newsList = newsBox.getElementsByTagName('li');
+
+		// 1.循环所有获取的LI，判断每一个LI的奇偶行，让其有不同的背景颜色
+		for (let i = 0; i < newsList.length; i++) {
+			let curLi = newsList[i];
+			curLi.style.background = i % 2 === 0 ? '#FFF' : '#DDD';
+			/*if (i % 2 === 0) {
+				// 索引是偶数，代表奇数行
+				curLi.style.background = '#FFF';
+			} else {
+				// 索引是奇数，代表偶数行
+				curLi.style.background = '#DDD';
+			}*/
+
+			curLi.onmouseover = function () {
+				// this ：当前操作的这个LI
+				this.style.background = 'lightblue';
+			}
+
+			curLi.onmouseout = function () {
+				// 思考题？：如何在离开的时候知道原来的背景颜色
+				this.style.background = '#FFF';
+			}
+		} 
+	</script>		
+</body>
+</html>
