@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态设置焦点控件</title>
+</head>
+<body>
+	<form name="formTraverse" method="get">
+		<p>First Name : <input type="text" name="fname" id="id-fname" value="king"></p>
+		<p>Last Name : <input type="text" name="lname" id="id-lname" value="wang"></p>
+		<input type="button" id="getfname" onclick="on_load_set_focus('id-fname');" value="动态设置fname焦点"/>
+		<input type="button" id="getlname" onclick="on_load_set_focus('id-lname');" value="动态设置lname聚焦"/>
+	</form>
+
+	<script type="text/javascript">
+		function on_load_set_focus(thisid) {
+			document.getElementById(thisid).focus();//通过获取的元素对象使用focus()方法来实现对该元素动态设置焦点的功能
+		}
+	</script>
+</body>
+</html>

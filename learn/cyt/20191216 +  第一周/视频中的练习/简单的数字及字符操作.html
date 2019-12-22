@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简单的数字以及字符操作</title>
+</head>
+<body>
+	<script type="text/javascript">
+		window.onload = function () {
+			getLowerCase = function (str, type) {
+				type = type || "locale";//是否采取本地转换格式
+				return type === "locale" && str.toLocaleUpperCase() || str.toUpperCase() ;
+			};
+			getNumbers = function (s) {
+				var n = parseInt(s,10);
+				if(isNaN(n)) return 0;
+				return n;
+			};
+			getString = function (n) {
+				return n.toString();
+			};
+			console.log(getLowerCase("ASDsssss2asdA"));//小写转大写
+			//字符串转化为数字
+			console.log(getNumbers("ASDsssss2asdA"));
+			//数字转化为字符型
+			console.log(getString(12345) + "类型：" + typeof getString(12345));
+		}
+	</script>
+</body>
+</html>

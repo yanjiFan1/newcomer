@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态修改表单控件的值</title>
+</head>
+<body>
+	<header>
+		<nav>JavaScript控制表单 - 动态修改表单控件的值</nav>
+	</header>
+	<hr>
+	<form>
+		<p>First Name : <input type="text" name="fname" id="id_fname" value="king"></p>
+		<p>Last Name : <input type="text" name="lname" id="id_lname" value="wang"></p>
+		<select id="id-sel-gender">
+			<option value="0">请选择</option>
+			<option value="1">男</option>
+			<option value="2">女</option>
+		</select><br><br><br><br>
+		<input type="button" name="id-modify-text" onclick="on_modify_text();" value = "修改控件文本"/>
+	</form>
+
+
+	<script type="text/javascript">
+		function on_modify_text() {     //定义一个on_modify_text()方法
+			document.getElementById("id_fname").value = "Tina";  //通过ID获取文本框的值并修改
+			document.getElementById("id_lname").value = "Xi";
+			var len = document.getElementById("id-sel-gender").options.length; //定义len为下拉菜单对象的长度
+			for(let i=0; i<len; i++)  //遍历下拉菜单对象，并将值修改为value值
+				document.getElementById("id-sel-gender").options[i].innerText = document.getElementById("id-sel-gender").options[i].value;
+			document.getElementById("id-modify-text").value = "文本已修改";
+		}
+	</script>
+</body>
+</html>

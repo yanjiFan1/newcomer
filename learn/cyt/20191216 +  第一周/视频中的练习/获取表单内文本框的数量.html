@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取表单内文本框的数量</title>
+</head>
+<body>
+	<header>
+		<nav>JavaScript表单-获取表单内文本框的数量</nav>
+	</header>
+	<hr>
+	<form>
+		<p>First Name : <input type="text" name="fname"></p>
+		<p>Middle Name : <input type="text" name="mname"></p>
+		<p>Last Name : <input type="text" name="lname"></p>
+		<input type="submit" name="Submit" value="Submit">
+		<input type="reset" name="reset" value="reset">
+	</form>
+
+	<!-- IMPORT JS -->
+	<script type="text/javascript">
+		var i, iCounts = 0;
+		var inputs = document.getElementsByTagName("input");
+		for(i=0; i < inputs.length; i++) {
+			var el=inputs[i];
+			if(el.type == "text")
+				iCounts++;
+		}
+		console.log("表单内文本框的数量为：" + iCounts);
+	</script>
+</body>
+</html>
