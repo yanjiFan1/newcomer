@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双向绑定(直接操作DOM)</title>
+</head>
+<body>
+	<input type="text" id="txt_id">
+	<p id="p_id"></p>
+
+	<script type="text/javascript">
+		var _xxObj = {}
+		Object.defineProperty( _xxObj, 'xx_val',{
+			get:function() {
+				console.log('gggg');
+				return 'xx123'
+			},
+			set:function( _n ){   
+				//console.log('ssss')
+				//写入时触发
+				document.getElementById('txt_id').value = _n;
+				document.getElementById('p_id').innerHTML = _n;
+			}
+		});
+		// 光标、焦点，在input输入框里，监听keyup事件
+		document.addEventListener('keyup',function(e){
+			//console.log(e.target)
+			_xxObj.xx_val = e.target.value;
+		});
+	</script>
+</body>
+</html>
