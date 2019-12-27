@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>电话拨号键盘</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .buttonbox{
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            position: relative;
+            left: 40%;
+            top: 50%;
+        }
+        button{
+            width: 60px;
+            height: 50px;
+            background-color: rgb(161, 176, 219);
+            float: center;
+        }
+        .first{
+            margin: 3px auto;
+        }
+        #id-input-tel {
+            margin-top: 10px;
+            width: 190px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="buttonbox">
+    <input type="text" id="id-input-tel" readonly/><br>
+    <button class="first">1</button>
+    <button class="second">2</button>
+    <button class="third">3</button>
+    <button class="first">4</button>
+    <button class="second">5</button>
+    <button class="third">6</button>
+    <button class="first">7</button>
+    <button class="second">8</button>
+    <button class="third">9</button>
+    <button class="first">*</button>
+    <button class="second">0</button>
+    <button class="third">#</button>
+</div>
+
+<!--IMPORT JS-->
+<script>
+    window.onload = function() {
+        var arrTel = [ "1","2","3","4","5","6","7","8","9","*","0","#"];
+        var arrBtn = document.getElementsByTagName('button');
+        var tel = document.getElementById("id-input-tel");
+        for(var i = 0; i < arrBtn.length; i++) {
+            arrBtn[i].index = i;
+            arrBtn[i].onclick = function () {
+                tel.value +=arrTel[this.index];
+            };
+        }
+    };
+</script>
+</body>
+</html>
