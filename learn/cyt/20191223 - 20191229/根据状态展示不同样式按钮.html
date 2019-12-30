@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="id-btn-status" style="width: 128px;height: 32px;">正常状态</button>
+        <p>当前的状态: </p>
+    </div>
+    <button id="id-btn-normal" onclick="on_normal_status()">正常状态</button>
+    <button id="id-btn-running" onclick="on_running_status()">运行状态</button>
+    <button id="id-btn-stop" onclick="on_stop_status()">停止状态</button>
+    <button id="id-btn-disable" onclick="on_disable_status()">禁用状态</button>
+
+    <script>
+        var curStatus = "";
+        function on_normal_status () {
+            var v_btn = document.getElementById('id-btn-status');
+            v_btn.disabled = false;
+            v_btn.innerText = "正常状态";
+            v_btn.style.color = "";
+            v_btn.style.fontWeight = "";
+            v_btn.style.backgroundColor = "";
+            curStatus = "正常状态"; //设置正常状态显示值
+            var p = document.getElementsByTagName("p") [0] ;
+            p.innerHTML = '当前状态：' + curStatus;
+        }
+        function on_running_status () {
+            var v_btn = document.getElementById('id-btn-status');
+            v_btn.disabled = false;
+            v_btn.innerText = "运行状态";
+            v_btn.style.color = "#fff";
+            v_btn.style.fontWeight = "bold";
+            v_btn.style.backgroundColor = "#666";
+            curStatus = "运行状态"; //设置正常状态显示值
+            var p = document.getElementsByTagName("p") [0] ;
+            p.innerHTML = '当前状态：' + curStatus;
+        }
+        function on_stop_status () {
+            var v_btn = document.getElementById('id-btn-status');
+            v_btn.disabled = false;
+            v_btn.innerText = "停止状态";
+            v_btn.style.color = "#888";
+            v_btn.style.fontWeight = "bold";
+            v_btn.style.backgroundColor = "#ccc";
+            curStatus = "停止状态"; //设置正常状态显示值
+            var p = document.getElementsByTagName("p") [0] ;
+            p.innerHTML = '当前状态：' + curStatus;
+        }
+        function on_disable_status () {
+            var v_btn = document.getElementById('id-btn-status');
+            v_btn.disabled = false;
+            v_btn.innerText = "禁用状态";
+            v_btn.style.color = "#ccc";
+            v_btn.style.fontWeight = "normal";
+            v_btn.style.backgroundColor = "#eee";
+            curStatus = "禁用状态"; //设置正常状态显示值
+            var p = document.getElementsByTagName("p") [0] ;
+            p.innerHTML = '当前状态：' + curStatus;
+        }
+    </script>
+</body>
+</html>

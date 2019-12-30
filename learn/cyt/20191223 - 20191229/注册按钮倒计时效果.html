@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册按钮倒计时效果</title>
+</head>
+<body>
+    <div>
+        <p>
+            <button id="id-btn-reg-timer" style="widows: 150px;height: 32px;">注册(剩余10秒)</button>
+        </p>
+    </div>
+    <script>
+        var btnRegTimer = null;  //空的计时器
+        window.onload = function () {
+            var v_btn = document.getElementById("id-btn-reg-timer");
+            v_btn.disabled = true;
+            v_btn.innerText = "注册(剩余10秒)";
+            window.clearInterval(btnRegTimer); //取消定时器
+            var btnRegSec = 10;
+            btnRegTimer = window.setInterval(function (){
+                if (btnRegSec == 0) {
+                    v_btn.disabled = false;
+                    v_btn.innerText = "注册";
+                    window.clearInterval(btnRegTimer); //取消定时器
+                } else {
+                    btnRegSec--;
+                    v_btn.innerText = "注册(剩余" + btnRegSec + " 秒";
+                }
+            },1000);
+        };
+    </script>
+</body>
+</html>

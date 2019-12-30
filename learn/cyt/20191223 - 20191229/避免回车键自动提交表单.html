@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>避免回车键自动提交表单</nav>
+    </header>
+    
+    <form name="formNoEnter" method="get" action="form-no-enter.php">
+        <p>First Name: <input type="text" name="fname" value="king"></p>
+        <p>Last Name: <input type="text" name="lname" value="Wang"></p>
+        <button type="submit" id="id-submit">提交表单</button>  <!--表单中若定义了submit类型的按钮，如果不对回车键进行屏蔽处理的话，当用户按下回车键后，默认会执行表单操作-->
+    </form>
+
+    <script>
+        window.onload = function () {
+            document.formNoEnter.onkeypress = function (ev) { //定义按下按键onkeypress事件处理方法
+                var ev = window.event || ev;
+                if (ev.keyCode == 13 || ev.which == 13) { //判断回车键按键的ASCII编码(13)
+                    console.log("Info : press enter no submit.");
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

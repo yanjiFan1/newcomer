@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>为删除功能按钮添加确认提醒</nav>
+    </header>
+    <hr>
+    <button id="id-btn-confirm">删除按钮</button>
+    <p>删除按钮 -- 删除内容</p>
+    <script>
+        document.getElementById("id-btn-confirm").onclick = function (e) {
+            if (confirm("Please confirm to del ?")) {
+                document.getElementsByTagName("p") [0].innerText = "";
+            }
+        };
+    </script>
+</body>
+</html>

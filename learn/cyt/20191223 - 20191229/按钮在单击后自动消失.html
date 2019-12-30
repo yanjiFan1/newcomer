@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js实例</title>
+</head>
+<body>
+    <header>
+        <nav>按钮在单击后自动消失</nav>
+    </header>
+    <hr>
+    <div>测试按钮：
+        <button id="id-click-once">Click Once</button>
+    </div>
+    <div>重新激活：
+        <button id="id-re-active">Re-Active</button>
+    </div>
+    
+    <script>
+        document.getElementById("id-click-once").onclick = function (e) {
+            e.target.disabled = true;
+        };
+        document.getElementById("id-re-active").onclick = function (e) {
+            document.getElementById("id-click-once").disabled = false;
+        };
+    </script>
+</body>
+</html>

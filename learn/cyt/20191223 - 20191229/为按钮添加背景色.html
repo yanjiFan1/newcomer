@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title为按钮添加背景色</title>
+</head>
+<body>
+    <div class="button">
+        <button>Red</button>
+        <button>Yellow</button>
+        <button>Blue</button>
+    </div>
+    <!--IMPORT JS-->
+    <script>
+        var colorBtn = ["red", "yellow", "blue"];
+        var arrBtn = document.getElementsByTagName("button");
+        for(var i=0; i<arrBtn.length; i++) {
+            arrBtn[i].style.backgroundColor = colorBtn[i];
+        }
+    </script>
+</body>
+</html>
