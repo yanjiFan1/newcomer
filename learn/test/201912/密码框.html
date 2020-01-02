@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>六位密码框</title>
+</head>
+<body>
+	<input type="password" id="pwd" value="">
+	<button onclick="check()">提交</button>
+
+	<script type="text/javascript">
+		function check() {
+			var pwd = document.getElementById('pwd').value;
+			if(pwd.trim() == "") {
+				console.log("密码不能为空");
+				return false;
+			}else if (pwd.length == 6) {
+				for(var i = 0; i<pwd.length; i++){
+					if (typeof(pwd[i]) == "number") {
+						return true;
+					}  
+				}
+			console.log("登录成功!");
+			}else {
+				console.log("请输入6位数");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
