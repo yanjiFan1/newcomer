@@ -14,13 +14,8 @@
 			if(pwd.trim() == "") {
 				console.log("密码不能为空");
 				return false;
-			}else if (pwd.length == 6) {
-				for(var i = 0; i<pwd.length; i++){
-					if (typeof(pwd[i]) == "number") {
-						return true;
-					}  
-				}
-			console.log("登录成功!");
+			}else if (/^[0-9]{6}$/.test(pwd)) {
+				console.log("登录成功!");
 			}else {
 				console.log("请输入6位数");
 				return false;
