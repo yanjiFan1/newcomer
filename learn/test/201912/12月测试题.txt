@@ -1,0 +1,45 @@
+html
+1. em 和 rem是什么
+
+
+
+css
+1. BFC是什么,产生条件
+2. 纯css画三角形
+3. 重绘和重排是什么， 产生条件
+4. 清除浮动的方式
+5. 
+.box:hover .detail{
+   display: block;
+}
+上面代码代表设么意思
+
+
+javascript
+
+1. JS获取html页面所有元素并统计每个标签的个数
+2. 0.1 + 0.2 === 0.3 ?
+3. 
+	function add(c, d){ 
+	  return this.a + this.b + c + d; 
+	} 
+	var o = {a:1, b:3}; 
+	add.call(o, 5, 7);  
+
+结果是多少？ 
+4. 手写函数防抖和节流
+5. [1, 2, 3].includes(2)
+
+6. function unique1(arr) {
+   return Array.from(new Set(arr))   
+}
+
+var arr = [1,1,'true','true',true,true,false,false,undefined,undefined,null,null,NaN,NaN,'NaN',0,0,'a','a',{},{}]
+
+执行 unique1(arr)  结果是？
+
+7. js的流程控制语句
+
+8. js数据类型？ 并且写出如何判断是否是此类型
+
+9. input输入框，写一个仅能输入6位随机数的密码

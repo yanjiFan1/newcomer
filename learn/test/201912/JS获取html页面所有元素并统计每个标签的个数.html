@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p></p>
+	<div></div>
+	<div></div>
+
+	<script type="text/javascript">
+		var sum = 0;
+		var a = document.getElementsByTagName('div');
+		for(var i = 0; i<a.length; i++) {
+			sum+=1;
+		}
+		console.log("div的个数为" + sum);
+		var sum2 = 0;
+		var b = document.getElementsByTagName('p');
+		for(var j = 0; j<b.length; j++) {
+			sum2+=1;
+		}
+		console.log("p的个数为：" + sum2);
+	</script>
+</body>
+</html>
