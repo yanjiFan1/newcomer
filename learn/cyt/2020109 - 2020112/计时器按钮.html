@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计时器按钮</title>
+</head>
+<body>
+	<div>
+		<p>
+			<button id="id-btn-timer">计时器按钮(0)秒</button>
+		</p>
+		<p>
+			<button id="id-btn-stater" onclick="on_start_timer()">开始倒计时</button>
+			<button id="id-btn-pause" onclick="on_pause_timer()">暂停倒计时</button>
+			<button id="id-btn-restore" onclick="on_restore_timer()">恢复倒计时</button>
+			<button id="id-btn-stop" onclick="on_stop_timer()">停止倒计时</button>
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		var myTimer = null; //定义计时器
+		var mySec = 0;     //定义累加器
+		function init() {     //初始化
+			var v_btn = document.getElementById('id-btn-timer');
+			v_btn.innerText = "计时器按钮(0)秒";
+			var v_btn_pause =document.getElementById('id-btn-pause');
+			v_btn_pause.disabled = true;
+			var v_btn_restore = document.getElementById('id-btn-restore');
+			v_btn_pause.disabled = true;
+			var v_btn_stop = document.getElementById('id-btn-stop');
+			v_btn_stop.disabled = true;
+		}
+		function on_start_timer() { //开始倒计时按钮
+			var v_btn = document.getElementById('id-btn-timer');
+			var v_btn_start = document.getElementById('id-btn-stater');
+			v_btn_start.disabled = true;
+			var v_btn_pause =document.getElementById('id-btn-pause');
+			v_btn_pause.disabled = false;
+			var v_btn_stop = document.getElementById('id-btn-stop');
+			v_btn_stop.disabled = false;
+			window.clearInterval(myTimer);   
+			mySec = 0;
+			myTimer = window.setInterval(function () {
+				mySec++;     //计时器累加
+				v_btn.innerText = "计时器按钮(" + mySec/1000 + ")秒";
+			},1);
+		}
+		function on_pause_timer() {
+			var v_btn = document.getElementById('id-btn-timer');
+			var v_btn_pause = document.getElementById('id-btn-pause');
+			v_btn_pause.disabled = true;
+			var v_btn_restore = document.getElementById('id-btn-restore');
+			v_btn_restore.disabled = false;
+			window.clearInterval(myTimer);   //清除计时器
+		}
+		function on_restore_timer() {
+			var v_btn = document.getElementById('id-btn-timer');
+			var v_btn_restore = document.getElementById('id-btn-restore');
+			v_btn_restore.disabled = true;
+			var v_btn_pause =document.getElementById('id-btn-pause');
+			v_btn_pause.disabled = false;
+			myTimer = window.setInterval(function () {
+				mySec++;
+				v_btn.innerText = "计时器按钮(" + mySec/1000 + ")秒";
+			},1);
+		}
+		function on_stop_timer() {
+			var v_btn_stop = document.getElementById('id-btn-stop');
+			v_btn_stop.disabled = true;
+			var v_btn_start = document.getElementById('id-btn-stater');
+			v_btn_start.disabled = false;
+			var v_btn_pause =document.getElementById('id-btn-pause');
+			v_btn_pause.disabled = true;
+			var v_btn_restore = document.getElementById('id-btn-restore');
+			v_btn_restore.disabled = true;
+			window.clearInterval(myTimer);
+			mySec = 0;           
+			var v_btn = document.getElementById('id-btn-timer');
+			v_btn.innerText = '计时器按钮(0)秒';
+		}
+	</script>
+</body>
+</html>
