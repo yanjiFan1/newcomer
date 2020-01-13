@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用链接代替表单提交按钮</title>
+</head>
+<body>
+	<form name="formLink" method="get" action="text.php">
+		<table>
+			<tr>
+				<th>用户名：&nbsp;&nbsp;</th>
+				<td><input type="text" name="uesername"></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<a href="#" id="id-link-submit" onclick="on_link_submit()">提交表单</a>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+	<script type="text/javascript">
+		function on_link_submit() {
+			document.formLink.submit(); //提交表单
+		}
+	</script>
+</body>
+</html>

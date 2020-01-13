@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>待下划线的链接</title>
+</head>
+<body>
+	<div class="css-p">
+		<a href="#">带下划线的链接（href）</a><br/><br/>
+		<a name="#">带下划线的链接（name) </a><br/><br/>
+		<input type="button" value="为全部连接添加下划线" onclick="addLinkUnderline();"/>
+	</div>
+	<script type="text/javascript">
+		function addLinkUnderline() {
+			var aLinks = document.getElementsByTagName("a");
+			for (var i = 0; i<aLinks.length; i++) {
+				var link = aLinks[i];
+				link.style.textDecoration = 'underline';
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改变链接的click事件</title>
+</head>
+<body>
+	<div class="css-p">
+		<p>
+			<a href="#anchor" id="id-m-link">一个链接</a>
+		</p>
+		<p>
+			<a name="anchor" id="id-m-anchor">一个锚点</a>
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		 window.onload = function () {
+			var mLink = document.getElementById("id-m-link");
+			mLink.onclick = function () {
+				alert('超链接被点击了！');
+				return false;
+			};
+		};
+	</script>
+</body>
+</html>

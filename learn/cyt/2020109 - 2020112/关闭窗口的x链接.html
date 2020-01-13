@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关闭窗口的X链接</title>
+</head>
+<body>
+	点击&nbsp;<a href="#" id="id-x-link">X</a>&nbsp;关闭窗口
+	<script type="text/javascript">
+		var xLink = document.getElementById("id-x-link");
+		xLink.onclick = function () {
+			window.close();
+			return false;
+		};
+	</script>
+</body>
+</html>

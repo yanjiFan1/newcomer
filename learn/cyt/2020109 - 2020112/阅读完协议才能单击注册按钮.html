@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阅读完协议</title>
+</head>
+<body>
+	<p>
+		<textarea readonly=true id="id-textarea-reg" onscroll="on_scroll_reg(this.id)">
+			阅读完才能单击注册按钮...
+		</textarea>
+		<button id="id-btn-reg" disabled>用户注册</button>
+	</p>
+
+	<script type="text/javascript">
+		function on_scroll_reg(thisid){
+			textareaReg = document.getElementById(thisid);
+			if((textareaReg.scrollTop + textareaReg.clientHeight)>=textareaReg.scrollHeight) {
+				document.getElementById("id-btn-reg").disabled = false;
+			}
+		}
+	</script>
+</body>
+</html>
