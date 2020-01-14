@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>链接特效</title>
+</head>
+<body>
+	<p>
+		<a href="#first-anchor" id="id-m-link">一个链接</a><br/>
+		<input type="button" value="修改链接地址" id="id-btn" onclick="on_modify_url();">
+	</p>
+	<p>
+		<a name="first-anchor">第一个锚点</a>
+	</p>
+	<p>
+		<a name="second-anchor">第二个锚点</a>
+	</p>
+</body>
+<script type="text/javascript">
+	function on_modify_url() {
+		var mLink = document.getElementById("id-m-link");
+		mLink.href = "#second-anchor";     //修改链接地址
+	}
+</script>
+</html>

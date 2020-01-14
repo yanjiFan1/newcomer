@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>链接特效 - 需要确认的超链接</title>
+</head>
+<body>
+	<a href="http://www.gov.cn/" onclick="return(confirmOpen(this.href))">打开超链接</a>
+</body>
+<script type="text/javascript">
+	function confirmOpen(link) {
+		if(confirm('请您确认打开' + link + '网址吗？')) {
+			return false;
+		} else {
+			return false;
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>链接特效</title>
+</head>
+<body>
+	<a href="index.php">链接1</a>&nbsp;&nbsp;
+	<a href="index.php?page=1">链接2</a>&nbsp;&nbsp;<br><br>
+	<input type="button" value="为链接地址新加一个参数" onclick="addUrlParam();"/>
+</body>
+<script type="text/javascript">
+	function addUrlParam() {
+		var links = document.getElementsByTagName('a');
+		for (var i = 0; i < links.length; i++) {
+			var aHref = links[i]['href'];//得到当前的链接地址
+			if (aHref.indexOf('?') > 0) {   //如果链接中包含有？说明已经带有参数了
+				links[i]['href'] = aHref + '&tab=2'; //使用&串接更多的参数
+			} else {
+				links[i]['href'] = aHref + '?page=1'; //使用？新加第一个参数
+			}
+		}
+	}
+</script>
+</html>

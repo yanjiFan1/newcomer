@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>链接特效</title>
+</head>
+<body>
+	<a href="#">链接一</a><br/>
+	<a href="#">链接二</a><br/>
+	<a href="#">链接三</a><br/>
+	<a href="#">链接四</a><br/>
+	<input type="button" id="myBtn" onclick="modifyLinkTarget();" value="新窗口打开链接" />
+</body>
+<script type="text/javascript">
+	function modifyLinkTarget() {
+		var linkDOMS = document.getElementsByTagName("a");
+		for(var i = 0; i < linkDOMS.length; i++){
+			var link = linkDOMS[i];			//当前链接DOM
+			link.target = "_blank";       //在新窗口中打开
+		}
+	}
+</script>
+</html>

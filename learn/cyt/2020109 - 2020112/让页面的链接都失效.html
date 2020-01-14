@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>链接特效</title>
+</head>
+<body>
+	<a href="#">链接一</a><br/>
+	<a href="#">链接二</a><br/>
+	<a href="#">链接三</a><br/>
+	<a href="#">链接四</a><br/>
+	<input type="button" id="myBtn" onclick="invaildLinks();" value="链接失效" />
+</body>
+<script type="text/javascript">
+	function invaildLinks() {
+		var linkDOMS = document.getElementsByTagName('a');
+		for (var i = 0; i < linkDOMS.length; i++) {
+			var link = linkDOMS[i];
+			link.onclick = null;
+			link.href = 'javascript:void(0)';  //地址改为什么也不做 void(0)是一个空方法
+		}
+	}
+</script>
+</html>
