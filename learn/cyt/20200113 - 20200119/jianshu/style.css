@@ -52,7 +52,6 @@ ul{
 ul li{
     float: left;
     width: 70px;
-    text-align: center;
     list-style-type: none;
 }
 ul li a{
